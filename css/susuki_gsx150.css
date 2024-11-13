@@ -1,0 +1,32 @@
+.textosusuki{
+  font-family:cursive;
+  margin: 20px;
+  font-size: 20px;
+  
+}
+
+.center{
+  width: 300px; 
+  border-radius: 10px;
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .center {
+      width: 90%; 
+     
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+  .center{
+      width: 40%; 
+      
+  }
+}

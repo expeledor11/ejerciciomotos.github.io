@@ -1,0 +1,114 @@
+
+.card-text{
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-link {
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif;
+  color: #fff;
+  justify-content: center;
+  
+  
+}
+
+.nav-link:hover{
+    color: #ff0000;
+}
+.navbar-toggler {
+    border: var(--bs-border-width) solid #ff0000;
+   
+}
+
+h1.titulos {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    
+    
+}
+
+.texto {
+    max-width: 60%; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.imagen6 {
+    width: 50px; 
+    height: auto; 
+    display: block;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .texto {
+        font-size: 1em; 
+        
+    }
+
+    .imagen6 {
+        width: 90%; 
+       
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 40px;
+    }
+
+    .texto {
+        font-size: 1.3em;
+        
+    }
+
+    .imagen6 {
+        width: 40%; 
+        
+    }
+}
+.dropdown-item {
+    color: #ff0000;
+    background-color: rgb(33 37 41);
+}
+.dropdown-menu {
+    background-color: rgb(33 37 41);
+}
+.dropdown-item:hover{
+    background-color: #a9a9aa;
+}
+
+.btn1{
+    background-color: #ff0000;
+    padding: 10px 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.btn1:hover{
+    background-color: #a9a9aa;
+    
+}
+
+/*footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
