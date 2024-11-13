@@ -1,0 +1,116 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawasaki Ninja</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="css/ninja.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="images/icono/icono.ico">
+  </head>
+  <body>
+    <div class="container">
+      <div class="moto-header d-flex align-items-center justify-content-between">
+        <h1>Modelo de Moto: Kawasaki Ninja 400</h1>
+        <button><a href="index.html" class="boton3">Inicio</a> </button> <!-- Botón de Inicio -->
+      </div>
+
+      <!-- Carrusel de imágenes -->
+      <div id="motoCarousel" class="carousel slide mt-3" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/images3/IMG_1.jpg" class="d-block w-100" alt="Moto Ninja 400" style="width: 600px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="images/images3/IMG_2.jpg" class="d-block w-100" alt="Moto Ninja 400" style="width: 600px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="images/images3/IMG_3.jpg" class="d-block w-100" alt="Moto Ninja 400" style="width: 600px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="images/images3/IMG_4.jpg" class="d-block w-100" alt="Moto Ninja 400" style="width: 600px; height: 600px;">
+          </div>
+          <div class="carousel-item">
+            <img src="images/images3/IMG_5.jpg" class="d-block w-100" alt="Moto Ninja 400" style="width: 600px; height: 600px;">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#motoCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#motoCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+
+      <div class="moto-details d-flex flex-wrap justify-content-between mt-3">
+        <div class="moto-specs col-md-6">
+          <h2>Características Técnicas</h2>
+          <ul>
+            <li>Motor: 399cc, bicilíndrico</li>
+            <li>Potencia: 49 HP</li>
+            <li>Transmisión: 6 velocidades</li>
+            <li>Peso: 168 kg</li>
+            <li>Capacidad de tanque: 14 L</li>
+          </ul>
+        </div>
+        <div class="moto-price col-md-6">
+          <h2>Precio</h2>
+          <p><strong>$36.990.000 COP</strong></p>
+          <a href="#" class="buy-button">Comprar</a>
+        </div>
+      </div>
+
+      <!-- Galería de miniaturas -->
+      <div class="thumbnail-gallery">
+        <img src="images/images3/IMG_1.jpg" alt="Miniatura 1" onclick="selectImage(0)">
+        <img src="images/images3/IMG_2.jpg" alt="Miniatura 2" onclick="selectImage(1)">
+        <img src="images/images3/IMG_3.jpg" alt="Miniatura 3" onclick="selectImage(2)">
+        <img src="images/images3/IMG_4.jpg" alt="Miniatura 4" onclick="selectImage(3)">
+        <img src="images/images3/IMG_5.jpg" alt="Miniatura 5" onclick="selectImage(4)">
+      </div>
+    </div>
+
+    <!-- Modal para ver la imagen en pantalla completa -->
+    <div class="modal" id="imageModal" onclick="closeModal()">
+      <button class="modal-close" onclick="closeModal()">&#10006;</button>
+      <img src="images/images3/IMG_1.jpg" alt="Imagen Completa" id="modalImage">
+    </div>
+
+    <script>
+      const images = [
+        "imagenes/IMG_1.jpg",
+        "imagenes/IMG_2.jpg",
+        "imagenes/IMG_3.jpg",
+        "imagenes/IMG_4.jpg",
+        "imagenes/IMG_5.jpg"
+      ];
+      let currentIndex = 0;
+
+      function updateImage() {
+        document.getElementById('modalImage').src = images[currentIndex];
+      }
+
+      function openModal() {
+        document.getElementById('imageModal').style.display = "flex";
+        updateImage();
+      }
+
+      function closeModal() {
+        document.getElementById('imageModal').style.display = "none";
+      }
+
+      function selectImage(index) {
+        currentIndex = index;
+        updateImage();
+      }
+    </script>
+
+    <!-- Enlace a jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>
